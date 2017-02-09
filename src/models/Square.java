@@ -38,8 +38,8 @@ public class Square implements Serializable{
 		}
 	}
 	
-	public boolean isInColumn(int row){
-		if(_xLocation == row){
+	public boolean isInColumn(int col){
+		if(_yLocation == col){
 			return true;
 		}
 		else{

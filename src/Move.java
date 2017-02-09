@@ -14,6 +14,18 @@ public class Move implements Serializable{
 	}
 	
 	public String toString(){
-		return _square.toString() + ": " +_player;
+		return _square.toString() + "," +_player + "," + _moveNumber;
+	}
+
+	public boolean isSameMove(Move move) {
+		return this.toString().equals(move.toString());
+	}
+	
+	public Square getLocation(){
+		return _square;
+	}
+	
+	public int getMoveNumber(){
+		return _moveNumber;
 	}
 }

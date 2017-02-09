@@ -89,6 +89,7 @@ public class NoughtsAndCrossesBoard {
 		return squares;
 	}
 
+	//TODO this method is fucked
 	private ArrayList<Square> getDiag(int i) {
 		ArrayList<Square> squares = new ArrayList<>();
 		
@@ -145,5 +146,9 @@ public class NoughtsAndCrossesBoard {
 		for(Square s : _possibleSquares){
 			s.setAsFilled("Nobody");
 		}
+	}
+
+	public ArrayList<Square> getSquares() {
+		return _squares;
 	}
 }

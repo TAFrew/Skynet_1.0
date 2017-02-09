@@ -33,4 +33,19 @@ public class Game implements Serializable{
 	public String getResult(){
 		return _result;
 	}
+
+	public boolean hasSameMoves(Game game) {
+		for(Move m : this.getMoves()){
+			boolean contains = false;
+			for(Move historyMove : game.getMoves()){
+				if(m.isSameMove(historyMove)){
+					contains = true;
+				}
+			}
+			if(contains == false){
+				return false;
+			}
+		}
+		return true;
+	}
 }
